@@ -1,32 +1,83 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <a-layout>
+      <a-layout-header>
+        <mainNav/>
+      </a-layout-header>
+      <a-layout-content>
+        <router-view/>
+      </a-layout-content>
+    </a-layout>
   </div>
 </template>
 
+<script>
+import mainNav from './components/mainNav.vue'
+export default {
+  name: 'App',
+  components: {
+    mainNav
+  },
+  data () {
+    return {}
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+body {
+  overflow: hidden;
+}
+.mainContentList {
+  line-height: normal;
+  list-style-type: none;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+.mainContentList > li {
+  margin-top: 20px;
+}
+.mainContentList h1 {
+  color: white;
+  font-size: 250%;
+}
+.mainContentList p {
+  padding: 0px;
+  margin-left: 20px;
+  font-size: 150%;
+}
+.mainContentList * {
+  padding: 0px;
+  margin: 0px;
+}
+.ant-layout-footer {
+  background: #7dbcea;
+  color: #fff;
 }
 
-#nav {
-  padding: 30px;
+.ant-layout-sider {
+  background: #3ba0e9;
+  color: #fff;
+  line-height: 120px;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.ant-layout-content {
+  background: rgb(32, 32, 32);
+  color: #fff;
+  padding-left: 10px;
+  height: auto;
+  overflow: auto;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.ant-layout-header {
+  padding: 0 !important;
+  height: auto !important;
+  padding: 0 !important;
+  background: rgb(40, 40, 40) !important;
+}
+.ant-layout {
+  margin-bottom: 48px;
+  height: 100vh;
+}
+.ant-layout:last-child {
+  margin: 0;
 }
 </style>
