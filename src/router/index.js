@@ -1,32 +1,32 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import about from "../views/about.vue";
-import meetings from "../views/meeting.vue";
-import creations from "../views/creations.vue";
-import contact from "../views/contactUs.vue";
+import aboutUs from '@/views/aboutUs.vue'
+import meetings from '@/views/meeting.vue'
+import creations from '@/views/creations.vue'
+import contact from '@/views/contactUs.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: "/",
-    name: "About Us",
-    component: about
+    path: '/',
+    name: 'About Us',
+    component: aboutUs
   },
   {
-    path: "/meetings",
-    name: "Meetings",
+    path: '/meetings',
+    name: 'Meetings',
     component: meetings
   },
   {
-    path: "/creations",
-    name: "Creations",
+    path: '/creations',
+    name: 'Creations',
     component: creations
   },
   {
-    path: "/contact",
-    name: "Contact Us",
+    path: '/contact',
+    name: 'Contact Us,
     component: contact
   }
 
