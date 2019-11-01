@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import about from "@/views/about.vue";
-import meetings from "@/views/meeting.vue";
-import creations from "@/views/creations.vue";
-import contact from "@/views/contactUs.vue";
+import about from "../views/about.vue";
+import meetings from "../views/meeting.vue";
+import creations from "../views/creations.vue";
+import contact from "../views/contactUs.vue";
 
 Vue.use(VueRouter)
 
