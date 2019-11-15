@@ -46,4 +46,4 @@ COPY --from=build /app/dist /app
 EXPOSE 8080
 
 # Set the startup command
-CMD ["./node_modules/.bin/http-server"]
+CMD ["./node_modules/.bin/http-server -p 5000"]
