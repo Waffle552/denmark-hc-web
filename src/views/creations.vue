@@ -2,7 +2,7 @@
   <ul class="mainContentList">
     <li>
       <p>
-        <a href="https://Yeetmaster--y33tmaster.repl.co ">Yeetmaster</a> by Collin
+        <a href="https://Yeetmaster--y33tmaster.repl.co ">AeroSpike</a> by Collin
       </p>
     </li>
   </ul>
