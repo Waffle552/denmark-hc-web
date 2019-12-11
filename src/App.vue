@@ -27,6 +27,12 @@ export default {
 <style>
 body {
   overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+#app {
+  margin: 0px;
+  padding: 0px;
 }
 .mainContentList {
   line-height: normal;
@@ -63,7 +69,6 @@ body {
 .ant-layout-content {
   background: rgb(32, 32, 32);
   color: #fff;
-  padding-left: 10px;
   height: auto;
   overflow: auto;
 }

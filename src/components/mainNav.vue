@@ -1,7 +1,10 @@
 <template>
   <div class="mainNav">
     <a-menu theme="dark" v-model="current" mode="horizontal">
-      <a-menu-item v-on:click="$router.push('/')" key="About Us">
+      <a-menu-item v-on:click="$router.push('/')" key="Home">
+        <a-icon type="home" />Home
+      </a-menu-item>
+      <a-menu-item v-on:click="$router.push('/about')" key="About Us">
         <a-icon type="question"/>About Us
       </a-menu-item>
       <a-menu-item v-on:click="$router.push('/meetings')" key="Meetings">

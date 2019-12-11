@@ -27,7 +27,7 @@ const data = [
     complete: false
   },
   {
-    date: '12/10/2019',
+    date: '1/7/2020',
     description: "Participants of the meeting will design a 2d platformer with a winter theme. They will discuss the mechanics of the game and draw concept art for it as well. The leaders of our club will make sure the project is within the scale of the participants' skill level. In the next meeting, we will at the least start building the game. At most complete and polish the game.",
     time: '4:00pm-5:30pm',
     location: 'Denmark Community School',

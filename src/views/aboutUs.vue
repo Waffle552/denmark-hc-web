@@ -3,7 +3,7 @@
     <ul class="mainContentList about">
       <li>
         <h1>Who are we?</h1>
-        <p>We are a club lead by high schoolers to help others get into coding and expand their knowledge and skills.</p>
+        <p>We are part of the international organization known as Hackclub. We thrive to bring coding to new minds and continue the learing of those who are already skilled. Our club provides a place where our coding community thrives.</p>
       </li>
       <li>
         <h1>How did we start?</h1>
