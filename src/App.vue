@@ -37,10 +37,13 @@ body {
 .mainContentList {
   line-height: normal;
   list-style-type: none;
-  margin-top: 10px;
-  margin-right: 50px;
+  background: rgba(40,40,40, .70);
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  padding: 10px 50px;
 }
-.mainContentList > li {
+.mainContentList > div {
   margin-top: 20px;
 }
 .mainContentList h1 {
@@ -51,6 +54,7 @@ body {
   padding: 0px;
   margin-left: 20px;
   font-size: 150%;
+  color: lightgrey;
 }
 .mainContentList * {
   padding: 0px;
@@ -67,20 +71,23 @@ body {
   line-height: 120px;
 }
 .ant-layout-content {
-  background: rgb(32, 32, 32);
   color: #fff;
   height: auto;
   overflow: auto;
+  padding: 0px;
+  justify-content: center;
 }
 .ant-layout-header {
   padding: 0 !important;
   height: auto !important;
   padding: 0 !important;
-  background: rgb(40, 40, 40) !important;
+  background: rgba(0,0,0,0) !important;
 }
 .ant-layout {
   margin-bottom: 48px;
   height: 100vh;
+  background-image: linear-gradient(-45deg, #FF1EA2, #FF5004) !important;
+  display: flex;
 }
 .ant-layout:last-child {
   margin: 0;

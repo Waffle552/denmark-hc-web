@@ -26,4 +26,9 @@ export default {
 .contact * {
   font-size: 120%;
 }
+@media only screen and (max-width: 600px){
+  .contact {
+    flex-direction: column;
+  }
+}
 </style>

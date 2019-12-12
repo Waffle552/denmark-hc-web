@@ -19,7 +19,7 @@
   }
   .homeText {
     font-weight: bold;
-    font-size: 700%;
+    font-size: 8vw;
     padding-bottom: 100px;
     font-weight: bold;
   }

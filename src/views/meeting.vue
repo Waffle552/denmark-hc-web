@@ -65,17 +65,22 @@ export default {
 </script>
 
 <style>
+
 .meeting {
   padding: 10px;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  background: rgba(40,40,40, .70);
 }
 .meeting .ant-list-item, .meeting .ant-list-item p {
   color: white !important;
 }
 .meeting .ant-list-item-meta-description {
-  color: grey !important;
+  color: lightgrey !important;
 }
 .meeting .ant-list-item {
-  border-bottom: solid 1px red !important;
+  border-bottom: solid 1px grey !important;
 }
 .meetingList-check {
   color: green !important;
