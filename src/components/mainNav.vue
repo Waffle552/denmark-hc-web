@@ -50,8 +50,12 @@ export default {
   display: none;
 }
 .mainNav .menuImg {
-  position: absolute;
-  right: 10px;
+  background: rgb(50, 50, 50);
+  margin-left: auto;
+  padding-right: 10px;
+  height: 35px;
+  align-items: center;
+  display: flex;
 }
 .mainNav .filler {
   background: rgb(50, 50, 50);
@@ -68,6 +72,7 @@ export default {
   align-content: center;
   color: lightgrey;
   flex-wrap: nowrap;
+  border: 1px rgb(50, 50, 50);
 }
 .mainNav .menuItem > p {
   color: lightgrey;
@@ -91,6 +96,9 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
+.mainNav {
+
+}
 .navLogo-desktop {
   display: none;
 }
@@ -100,18 +108,34 @@ export default {
 }
 .mainNav .filler {
   height: 50px;
+  display: none;
 }
 .mainNav .menuItem {
-  background: rgb(50, 50, 50);
   height: 50px;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   padding: 0px 10px;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  flex: 1 1 0;
 }
-.mainNav .menuItem * {
-  font-size: 150;
+.mainNav .menuItem p {
+  font-size: 70%;
+}
+.mainNav .menuImg {
+  height: 50px;
+}
+mainNav .router-link-active{
+  background-color: rgba(0,0,0,0);
+  color: white;
+  text-decoration: none;
+}
+.mainNav .router-link-active > p{
+  color: white;
+  text-decoration: none;
+}
+.mainNav .menuItem:hover > * {
+  color: white;
 }
 }
 

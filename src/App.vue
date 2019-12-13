@@ -1,12 +1,15 @@
 <template>
   <div id="app">
     <a-layout>
-      <a-layout-header>
+      <a-layout-header  v-if='!mobile'>
         <mainNav/>
       </a-layout-header>
       <a-layout-content>
         <router-view/>
       </a-layout-content>
+      <a-layout-footer  v-if='mobile'>
+        <mainNav/>
+      </a-layout-footer>
     </a-layout>
   </div>
 </template>
@@ -19,8 +22,16 @@ export default {
     mainNav
   },
   data () {
-    return {}
-  }
+    return {
+      mobile: window.innerWidth < 600
+    }
+  },
+  created () {
+  },
+  destroyed () {
+
+  },
+  methods: {}
 }
 </script>
 
@@ -38,10 +49,11 @@ body {
   line-height: normal;
   list-style-type: none;
   background: rgba(40,40,40, .70);
-  height: 100%;
+  min-height: 100%;
+  height: auto;
   width: 80%;
   margin: auto;
-  padding: 10px 50px;
+  padding: 5px 5%;
 }
 .mainContentList > div {
   margin-top: 20px;
@@ -59,10 +71,6 @@ body {
 .mainContentList * {
   padding: 0px;
   margin: 0px;
-}
-.ant-layout-footer {
-  background: #7dbcea;
-  color: #fff;
 }
 
 .ant-layout-sider {
@@ -83,6 +91,12 @@ body {
   padding: 0 !important;
   background: rgba(0,0,0,0) !important;
 }
+.ant-layout-footer {
+  padding: 0 !important;
+  height: auto !important;
+  padding: 0 !important;
+  background: rgba(0,0,0,0) !important;
+}
 .ant-layout {
   margin-bottom: 48px;
   height: 100vh;
@@ -91,5 +105,13 @@ body {
 }
 .ant-layout:last-child {
   margin: 0;
+}
+@media only screen and (max-width: 600px){
+  .mainContentList h1 {
+  font-size: 200%;
+  }
+  .mainContentList p {
+    font-size: 100%;
+  }
 }
 </style>

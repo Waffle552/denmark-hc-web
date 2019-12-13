@@ -1,9 +1,9 @@
 <template>
   <div class='meeting'>
-    <a-list itemLayout='horizontal' :dataSource='data'>
+    <a-list v-bind:itemLayout='format' :dataSource='data'>
       <a-list-item slot='renderItem' slot-scope='item'>
         <a-list-item-meta v-bind:description='item.description'>
-          <p slot='title'>{{item.date}}</p>
+          <p slot='title' class= "listItem-title">{{item.date}}</p>
         </a-list-item-meta>
         <div>
           <div class='meetingList-time'>Location: {{item.location}}</div>
@@ -57,10 +57,25 @@ export default {
   components: {},
   data () {
     return {
-      data
+      data,
+      format: 'horizontal'
+    }
+  },
+  created () {
+    this.setFormat()
+  },
+  destroyed () {
+
+  },
+  methods: {
+    setFormat () {
+      if (window.innerWidth < 600) {
+        this.format = 'vertical'
+      } else {
+        this.format = 'horizontal'
+      }
     }
   }
-
 }
 </script>
 
@@ -72,8 +87,10 @@ export default {
   height: 100%;
   margin: auto;
   background: rgba(40,40,40, .70);
+  min-height: 100%;
+  height: auto;
 }
-.meeting .ant-list-item, .meeting .ant-list-item p {
+.meeting .listItem-title {
   color: white !important;
 }
 .meeting .ant-list-item-meta-description {
@@ -87,5 +104,10 @@ export default {
 }
 .meetingList-x {
   color: red !important;
+}
+@media only screen and (max-width: 600px){
+  .meeting * {
+    font-size: 90%;
+  }
 }
 </style>
