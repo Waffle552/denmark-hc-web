@@ -124,6 +124,7 @@ export default {
 }
 .mainNav .menuImg {
   height: 50px;
+  padding: 0px;
 }
 mainNav .router-link-active{
   background-color: rgba(0,0,0,0);

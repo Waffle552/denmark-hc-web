@@ -93,6 +93,9 @@ export default {
 .meeting .listItem-title {
   color: white !important;
 }
+.meeting .ant-list-item-content div {
+  color: grey !important;
+}
 .meeting .ant-list-item-meta-description {
   color: lightgrey !important;
 }
@@ -107,7 +110,7 @@ export default {
 }
 @media only screen and (max-width: 600px){
   .meeting * {
-    font-size: 90%;
+    font-size: 100%;
   }
 }
 </style>
