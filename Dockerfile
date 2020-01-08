@@ -45,4 +45,4 @@ COPY server.js .
 EXPOSE 8080
 
 # Set the startup command
-RUN node server.js
+CMD node server.js
