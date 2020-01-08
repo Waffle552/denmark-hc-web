@@ -35,15 +35,14 @@ RUN mkdir /app
 WORKDIR /app
 
 # Initialize a new node app and
-# install http-server
-RUN npm init -y && \
-  npm install http-server
+RUN npm init -y
 
 # Copy the built artifacts from the build stage
 COPY --from=build /app/dist /app
+COPY server.js .
 
 # Expose port
 EXPOSE 8080
 
 # Set the startup command
-CMD ["./node_modules/.bin/http-server"]
+CMD ["node server.js"]
