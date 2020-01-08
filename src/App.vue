@@ -23,7 +23,7 @@ export default {
   },
   data () {
     return {
-      mobile: window.innerWidth < 600
+      mobile: window.innerWidth <= 700
     }
   },
   created () {
@@ -44,6 +44,7 @@ body {
 #app {
   margin: 0px;
   padding: 0px;
+  height: 100vh;
 }
 .mainContentList {
   line-height: normal;
@@ -80,7 +81,6 @@ body {
 }
 .ant-layout-content {
   color: #fff;
-  height: auto;
   overflow: auto;
   padding: 0px;
   justify-content: center;
@@ -106,12 +106,15 @@ body {
 .ant-layout:last-child {
   margin: 0;
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 700px){
   .mainContentList h1 {
   font-size: 200%;
   }
   .mainContentList p {
     font-size: 100%;
+  }
+  .ant-layout-content > * {
+    padding-bottom: 200px !important;
   }
 }
 </style>

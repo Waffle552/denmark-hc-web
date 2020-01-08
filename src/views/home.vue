@@ -1,6 +1,6 @@
 <template>
   <div class="hcGradient">
-    <h class="homeText">Code your own adventure</h>
+    <p class="homeText">Code your own adventure</p>
     <img style="width:90%;" src="../assets/whiteHCLetters.svg">
   </div>
 </template>
@@ -22,5 +22,10 @@
     font-size: 8vw;
     padding-bottom: 100px;
     font-weight: bold;
+  }
+  @media only screen and (max-width: 700px){
+    .hcGradient {
+      padding-bottom: 40% !important;
+    }
   }
 </style>

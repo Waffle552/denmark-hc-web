@@ -95,9 +95,10 @@ export default {
   color: white;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 .mainNav {
-
+  position: fixed;
+  bottom: 0px;
 }
 .navLogo-desktop {
   display: none;

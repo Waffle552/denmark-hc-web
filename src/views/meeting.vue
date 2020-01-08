@@ -1,5 +1,6 @@
 <template>
   <div class='meeting'>
+    <p>Have an idea for a meeting? Contact us directly or via one of these <a v-on:click="$router.push('/contact')">options</a>.</p>
     <a-list v-bind:itemLayout='format' :dataSource='data'>
       <a-list-item slot='renderItem' slot-scope='item'>
         <a-list-item-meta v-bind:description='item.description'>
@@ -19,16 +20,8 @@
 <script>
 const data = [
   {
-    date: 'N/A',
-    description: 'Participants will start building the game disigned last meeting.',
-    time: '4:00pm-5:30pm',
-    location: 'Denmark Community School',
-    food: 'N/A',
-    complete: false
-  },
-  {
-    date: '1/7/2020',
-    description: "Participants of the meeting will design a 2d platformer with a winter theme. They will discuss the mechanics of the game and draw concept art for it as well. The leaders of our club will make sure the project is within the scale of the participants' skill level. In the next meeting, we will at the least start building the game. At most complete and polish the game.",
+    date: '1/15/2020',
+    description: 'Activities of this meeting include working own you own web app/site(Beginner - Advanced HTML JS CSS) or participate in making a browser ready clone of Minecraft(Advanced - Moderate skill in JS).',
     time: '4:00pm-5:30pm',
     location: 'Denmark Community School',
     food: 'Pizza',
