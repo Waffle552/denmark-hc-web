@@ -20,7 +20,7 @@
 <script>
 const data = [
   {
-    date: '1/15/2020',
+    date: '2/4/2020',
     description: 'Activities of this meeting include working own you own web app/site(Beginner - Advanced HTML JS CSS) or participate in making a browser ready clone of Minecraft(Advanced - Moderate skill in JS).',
     time: '4:00pm-5:30pm',
     location: 'Denmark Community School',

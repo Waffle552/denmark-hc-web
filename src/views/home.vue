@@ -20,7 +20,6 @@
   .homeText {
     font-weight: bold;
     font-size: 8vw;
-    padding-bottom: 100px;
     font-weight: bold;
   }
   @media only screen and (max-width: 700px){
