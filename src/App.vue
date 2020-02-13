@@ -33,7 +33,7 @@ export default {
       this.xLast = evt.touches[0].screenX
     },
     'onRemove': function (evt) {
-      if (Math.abs(this.xDelta) > 1) {
+      if (Math.abs(this.xDelta) > 15) {
         let routes = this.$router.options.routes
         for (let i = 0; i < routes.length; i++) {
           if (routes[i].path === this.$router.currentRoute.path) {
