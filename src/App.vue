@@ -1,15 +1,12 @@
 <template>
   <div id="app">
     <a-layout>
-      <a-layout-header  v-if='!mobile'>
+      <a-layout-header>
         <mainNav/>
       </a-layout-header>
       <a-layout-content>
         <router-view/>
       </a-layout-content>
-      <a-layout-footer  v-if='mobile'>
-        <mainNav/>
-      </a-layout-footer>
     </a-layout>
   </div>
 </template>
@@ -21,17 +18,45 @@ export default {
   components: {
     mainNav
   },
-  data () {
-    return {
-      mobile: window.innerWidth <= 700
+  data: function () {
+    return ({
+      'xLast': null,
+      'xDelta': null
+    })
+  },
+  methods: {
+    'onTouch': function (evt) {
+      this.xLast = evt.touches[0].screenX
+    },
+    'onMove': function (evt) {
+      this.xDelta = this.xLast - evt.touches[0].screenX
+      this.xLast = evt.touches[0].screenX
+    },
+    'onRemove': function (evt) {
+      if (Math.abs(this.xDelta) > 1) {
+        let routes = this.$router.options.routes
+        for (let i = 0; i < routes.length; i++) {
+          if (routes[i].path === this.$router.currentRoute.path) {
+            let newPath = i + Math.sign(this.xDelta)
+            if (newPath < routes.length && newPath >= 0) {
+              this.$router.push(routes[newPath].path)
+            } else if (newPath < 0) {
+              this.$router.push(routes[routes.length - 1])
+            } else if (newPath > routes.length - 1) {
+              this.$router.push(routes[0])
+            }
+            break
+          }
+        }
+      }
     }
   },
-  created () {
-  },
-  destroyed () {
+  created: function () {
+    document.addEventListener('touchstart', this.onTouch, false)
+    document.addEventListener('touchmove', this.onMove, false)
+    document.addEventListener('touchend', this.onRemove, false)
+  }
 
-  },
-  methods: {}
 }
 </script>
 
@@ -40,11 +65,13 @@ body {
   overflow: hidden;
   margin: 0px;
   padding: 0px;
+  background-image: linear-gradient(-45deg, #FF1EA2, #FF5004) !important;
 }
 #app {
   margin: 0px;
   padding: 0px;
   height: 100vh;
+  background: rgba(0, 0, 0, 0)
 }
 .mainContentList {
   line-height: normal;
@@ -52,7 +79,7 @@ body {
   background: rgba(40,40,40, .70);
   min-height: 100%;
   height: auto;
-  width: 80%;
+  width: 90%;
   margin: auto;
   padding: 5px 5%;
 }
@@ -81,9 +108,9 @@ body {
 }
 .ant-layout-content {
   color: #fff;
-  overflow: auto;
   padding: 0px;
   justify-content: center;
+  overflow: auto;
 }
 .ant-layout-header {
   padding: 0 !important;
@@ -100,8 +127,8 @@ body {
 .ant-layout {
   margin-bottom: 48px;
   height: 100vh;
-  background-image: linear-gradient(-45deg, #FF1EA2, #FF5004) !important;
   display: flex;
+  background: rgba(0, 0, 0, 0) !important;
 }
 .ant-layout:last-child {
   margin: 0;

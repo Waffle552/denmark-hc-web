@@ -1,30 +1,30 @@
 <template>
-  <div class="hcGradient">
-    <p class="homeText">Code your own adventure</p>
-    <img style="width:90%;" src="../assets/whiteHCLetters.svg">
+  <div class="home">
+    <router-link to="./about">About us</router-link>
+    <router-link to="./meetings">Meetings</router-link>
+    <router-link to="./creations">Creations</router-link>
+    <router-link to="./contact">Contact Us</router-link>
   </div>
 </template>
 <script>
 </script>
 <style>
-  .hcGradient {
+  .home {
     width: 100%;
     height: 100%;
+    padding: 0px;
     margin: 0px;
-    background-image: linear-gradient(-45deg, #FF1EA2, #FF5004);
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
   }
-  .homeText {
-    font-weight: bold;
-    font-size: 8vw;
-    font-weight: bold;
+  .home * {
+    color: white;
+    font-size: 5vw;
   }
-  @media only screen and (max-width: 700px){
-    .hcGradient {
-      padding-bottom: 40% !important;
-    }
+  .home *:hover {
+    color: white;
+    font-size: 10vw;
   }
 </style>
