@@ -21,19 +21,25 @@ export default {
   data: function () {
     return ({
       'xLast': null,
-      'xDelta': null
+      'xDelta': null,
+      'yLast': null,
+      'yDelta': null
     })
   },
   methods: {
     'onTouch': function (evt) {
       this.xLast = evt.touches[0].screenX
+      this.yLast = evt.touches[0].screenY
     },
     'onMove': function (evt) {
       this.xDelta = this.xLast - evt.touches[0].screenX
+      this.yDelta = this.yLast - evt.touches[0].screenY
+
       this.xLast = evt.touches[0].screenX
+      this.yLast = evt.touches[0].screenY
     },
     'onRemove': function (evt) {
-      if (Math.abs(this.xDelta) > 15) {
+      if (Math.abs(this.xDelta) > 15 &&  Math.abs(this.yDelta) < 5) {
         let routes = this.$router.options.routes
         for (let i = 0; i < routes.length; i++) {
           if (routes[i].path === this.$router.currentRoute.path) {
