@@ -30,6 +30,9 @@ export default {
     'onTouch': function (evt) {
       this.xLast = evt.touches[0].screenX
       this.yLast = evt.touches[0].screenY
+
+      this.xDelta = 0
+      this.yDelta = 0
     },
     'onMove': function (evt) {
       this.xDelta = this.xLast - evt.touches[0].screenX
@@ -39,7 +42,7 @@ export default {
       this.yLast = evt.touches[0].screenY
     },
     'onRemove': function (evt) {
-      if (Math.abs(this.xDelta) > 15 && Math.abs(this.yDelta) < 10) {
+      if (Math.abs(this.xDelta) > 15 && Math.abs(this.yDelta) < 15) {
         let routes = this.$router.options.routes
         for (let i = 0; i < routes.length; i++) {
           if (routes[i].path === this.$router.currentRoute.path) {
