@@ -1,9 +1,7 @@
 <template>
   <div class="home">
-    <router-link to="./about">About us</router-link>
-    <router-link to="./meetings">Meetings</router-link>
-    <router-link to="./creations">Creations</router-link>
-    <router-link to="./contact">Contact Us</router-link>
+    <p>Join our next meeting!</p>
+    <router-link to="/meetings">Meeting Times</router-link>
   </div>
 </template>
 <script>
@@ -15,16 +13,26 @@
     padding: 0px;
     margin: 0px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
   }
-  .home * {
-    color: white;
-    font-size: 5vw;
+  .home p {
+    color: #f88dad;
+    font-size: 9vw;
   }
-  .home *:hover {
+  .home a {
+    display: flex;
+    padding: 10px;
+    font-size: 20px;
     color: white;
-    font-size: 10vw;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: #8390fa;
+  }
+  .home a:hover {
+    color: white;
+    background: #9da8fb;
   }
 </style>

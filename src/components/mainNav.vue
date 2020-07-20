@@ -1,13 +1,8 @@
 <template>
-  <div>
-    <div class="logo">
-      <img src="../assets/whiteHCLetters.svg" />
-      <p>Code your own adventure</p>
-    </div>
-    <div class="mainNav">
+  <div class="mainNav">
+    <div class="spacing">
       <router-link class="menuItem" exact to="/">
-        <a-icon type="home" />
-        <p>Home</p>
+        <img src="@/assets/dhcLOGO.png" width="50px" height="50px"/>
       </router-link>
       <router-link class="menuItem" to="/about">
         <a-icon type="question" />
@@ -25,14 +20,7 @@
         <a-icon type="edit" />
         <p>Contact</p>
       </router-link>
-      <div class="filler"></div>
-      <a href="https://hackclub.com" class="menuImg">
-        <img class="navLogo-desktop" style="width:100px;" src="../assets/hack_club_red_text.png" />
-        <img
-          class="navLogo-mobile"
-          src="https://raw.githubusercontent.com/hackclub/hackclub/master/internals/logos/hack_club_letter.png"
-        />
-      </a>
+      <div class="menuItem hiddenMobile" style="color: white; font-size: 20px;">*Code your own adventure*</div>
     </div>
   </div>
 </template>
@@ -65,57 +53,34 @@ export default {
   margin: 1vh 0 1vh 0;
 
 }
-.logo p{
-  color: white;
-  font-size: 4vw;
-  font-weight: bold;
-  margin: 0px;
-}
-.logo img{
-  width: 30vw;
-}
 .mainNav {
-  height: auto;
+  height: 10vh;
   display: flex;
   line-height: normal;
   align-items: center;
+  justify-content: center;
   width: 100vw;
   line-height: 10px;
+  background: #39393A;
 }
-.navLogo-desktop {
-  width: 100px;
-}
-.navLogo-mobile {
-  width: 50px;
-  display: none;
-}
-.mainNav .menuImg {
-  background: rgb(50, 50, 50);
-  margin-left: auto;
-  padding-right: 10px;
-  height: 35px;
-  align-items: center;
+.mainNav > .spacing {
   display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.mainNav .filler {
-  background: rgb(50, 50, 50);
-  flex: 1;
-  height: 35px;
-  color: rgba(0, 0, 0, 0);
-}
+
 .mainNav .menuItem {
-  background: rgb(50, 50, 50);
   padding: 10px;
-  height: 35px;
+  height: auto;
   flex-direction: row;
   justify-items: center;
   align-content: center;
-  color: lightgrey;
+  color: #edbfc7;
   flex-wrap: nowrap;
-  border: 1px rgb(50, 50, 50);
 }
 .mainNav .menuItem > p {
-  color: lightgrey;
+  color: #edbfc7;
   margin: 0px;
   margin-left: 0.5vw;
 }
@@ -124,29 +89,24 @@ export default {
 }
 .mainNav .router-link-active {
   background-color: rgba(0, 0, 0, 0);
-  color: white;
+  color: #f9e9ec;
   text-decoration: none;
 }
 .mainNav .router-link-active > p {
-  color: white;
+  color: #f9e9ec;
   text-decoration: none;
 }
 .mainNav .menuItem:hover > * {
-  color: white;
+  color: #f9e9ec;
 }
 
 @media only screen and (max-width: 700px) {
-  .navLogo-desktop {
-    display: none;
+  .hiddenMobile {
+    display: none !important;
   }
-  .navLogo-mobile {
-    width: 50px;
-    display: flex;
-  }
-  .mainNav .filler {
-    height: 50px;
-    display: none;
-  }
+  .mainNav > .spacing {
+  width: 100% !important;
+}
   .mainNav .menuItem {
     height: 50px;
     display: flex;
@@ -156,6 +116,12 @@ export default {
     flex-direction: column;
     flex: 1 1 0;
   }
+  .mainNav > .spacing {
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  align-items: center;
+}
   .mainNav .menuItem p {
     font-size: 70%;
   }
@@ -163,7 +129,7 @@ export default {
     height: 50px;
     padding: 0px;
   }
-  mainNav .router-link-active {
+  .mainNav .router-link-active {
     background-color: rgba(0, 0, 0, 0);
     color: white;
     text-decoration: none;

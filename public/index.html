@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link
-      rel="icon"
-      href="https://raw.githubusercontent.com/hackclub/hackclub/master/internals/logos/hack_club_letter.png"
-    />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <title>Denmark Hack Club</title>
-    <script>
-      var Countly = Countly || {};
-      Countly.q = Countly.q || [];
-      Countly.app_key = "71e05d3b507c0a2fadd7046d79f6b01bab4b3d8c";
-      Countly.url = "https://analytics.zethlon.me";
-      Countly.q.push(["track_sessions"]);
-      Countly.q.push(["track_pageview"]);     
-      Countly.q.push(['track_clicks']);
-      Countly.q.push(['track_scrolls']);
-      // Load Countly script asynchronously
-      (function() {
-        var cly = document.createElement("script");
-        cly.type = "text/javascript";
-        cly.async = true;
-        // Enter url of script here (see below for other option)
-        cly.src =
-          "https://cdn.jsdelivr.net/npm/countly-sdk-web@latest/lib/countly.min.js";
-        cly.onload = function() {
-          Countly.init();
-        };
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(cly, s);
-      })();
-    </script>
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <link rel="icon"
+    href="https://raw.githubusercontent.com/hackclub/hackclub/master/internals/logos/hack_club_letter.png" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Denmark Hack Club</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
 </html>

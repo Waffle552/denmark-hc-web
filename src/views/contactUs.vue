@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <div class="contact mainContentList">
     <p>
       <a-icon type="phone" :style="{ fontSize: '170%'}"/> +1 (920) 415-4429
     </p>

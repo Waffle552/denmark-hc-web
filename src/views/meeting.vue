@@ -1,5 +1,5 @@
 <template>
-  <div class='meeting'>
+  <div class='meeting mainContentList'>
     <p>Have an idea for a meeting? Contact us directly or via one of these <a v-on:click="$router.push('/contact')">options</a>.</p>
     <a-list v-bind:itemLayout='format' :dataSource='data'>
       <a-list-item slot='renderItem' slot-scope='item'>
@@ -79,7 +79,6 @@ export default {
   width: 90%;
   height: 100%;
   margin: auto;
-  background: rgba(40,40,40, .70);
   min-height: 100%;
   height: auto;
 }

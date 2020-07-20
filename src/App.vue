@@ -1,4 +1,5 @@
 <template>
+  <!-- Color pallet 39393a-8390fa-fac748-f9e9ec-f88dad -->
   <div id="app">
     <a-layout>
       <a-layout-header>
@@ -71,7 +72,7 @@ body {
   overflow: hidden;
   margin: 0px;
   padding: 0px;
-  background-image: linear-gradient(-45deg, #FF1EA2, #FF5004) !important;
+  background: #FAC748 !important;
 }
 #app {
   margin: 0px;
@@ -79,10 +80,13 @@ body {
   height: 100vh;
   background: rgba(0, 0, 0, 0)
 }
+p {
+  margin: 0px;
+}
 .mainContentList {
   line-height: normal;
   list-style-type: none;
-  background: rgba(40,40,40, .70);
+  background: #39393abe;
   min-height: 100%;
   height: auto;
   width: 90%;
